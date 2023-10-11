@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ic_appointment.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <shape>
+        <solid android:color="#FF4081"/> <!-- Calendar background color -->
+        <corners android:radius="4dp"/> <!-- Rounded corners, adjust as needed -->
+    </shape>
+
+
+    <!-- Foreground Drawable (Tick) -->
+    <item
+        android:drawable="@drawable/ic_tick"
+        android:gravity="center"
+        android:right="8dp"
+        android:top="8dp"/>
+</layer-list>

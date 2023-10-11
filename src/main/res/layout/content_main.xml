@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/rectangleContainer1"
+            android:layout_width="114dp"
+            android:layout_height="116dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/rectangle_border"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/rectangleContainer2"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="yourButtonClickHandler"
+                app:srcCompat="@android:drawable/ic_menu_my_calendar"
+                tools:layout_editor_absoluteX="140dp"
+                tools:layout_editor_absoluteY="389dp" />
+
+            <TextView
+                android:layout_width="79dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:text="Appointment"
+                android:textColor="#000000"
+                android:textSize="11dp"
+                tools:layout_editor_absoluteX="68dp"
+                tools:layout_editor_absoluteY="145dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rectangleContainer2"
+            android:layout_width="114dp"
+            android:layout_height="116dp"
+            android:layout_marginTop="76dp"
+            android:background="@drawable/rectangle_border"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/rectangleContainer3"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toEndOf="@id/rectangleContainer1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="wrap"
+            app:layout_constraintWidth_min="0dp">
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:onClick="yourButtonClickHandler"
+                app:srcCompat="@android:drawable/stat_notify_chat"
+                tools:layout_editor_absoluteX="177dp"
+                tools:layout_editor_absoluteY="367dp" />
+
+            <TextView
+                android:layout_width="79dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:text="Notification"
+                android:textColor="#000000"
+                android:textSize="11dp"
+                tools:layout_editor_absoluteX="68dp"
+                tools:layout_editor_absoluteY="145dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rectangleContainer3"
+            android:layout_width="114dp"
+            android:layout_height="116dp"
+            android:layout_marginTop="76dp"
+            android:background="@drawable/rectangle_border"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toEndOf="@id/rectangleContainer2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="wrap"
+            app:layout_constraintWidth_min="0dp">
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="yourButtonClickHandler"
+                app:srcCompat="@android:drawable/ic_menu_recent_history"
+                tools:layout_editor_absoluteX="140dp"
+                tools:layout_editor_absoluteY="389dp" />
+
+            <TextView
+                android:layout_width="79dp"
+                android:layout_height="wrap_content"
+                android:text="Service history"
+                android:textColor="#000000"
+                android:textSize="11dp"
+                tools:layout_editor_absoluteX="315dp"
+                tools:layout_editor_absoluteY="88dp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/selectServiceText"
+            android:layout_width="239dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="32dp"
+            android:text="Select service and maintenance"
+            app:layout_constraintEnd_toStartOf="@id/seeAllButton"
+            app:layout_constraintHorizontal_bias="0.202"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rectangleContainer1" />
+
+
+        <Button
+            android:id="@+id/seeAllButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="See all"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/selectServiceText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/selectServiceText"
+            app:layout_constraintTop_toTopOf="@id/selectServiceText"
+            app:layout_constraintVertical_bias="0.47"
+            android:onclick="onSeeAllButtonClick"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="308dp"
+            android:layout_height="102dp"
+            android:gravity="center_horizontal"
+            tools:layout_editor_absoluteX="31dp"
+            tools:layout_editor_absoluteY="286dp"
+            tools:ignore="MissingConstraints">
+
+            <ImageButton
+                android:id="@+id/imageButton7"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:onClick="yourButtonClickHandler"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_house" />
+
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="40dp"
+                android:onClick="yourButtonClickHandler"
+                app:layout_constraintStart_toEndOf="@id/imageButton7"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_window" />
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="40dp"
+                android:onClick="yourButtonClickHandler"
+                app:layout_constraintStart_toEndOf="@id/imageButton8"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_maintenance" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="House cleaning"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageButton7" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Window cleaning"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.407"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageButton8" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Elevator maintenance"
+                android:textSize="10sp"
+                tools:layout_editor_absoluteX="189dp"
+                tools:layout_editor_absoluteY="61dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/recommendationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Recommendation"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="416dp" />
+
+        <LinearLayout
+            android:id="@+id/companyContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/recommendationText">
+
+
+            <ImageView
+                android:id="@+id/companyImage"
+                android:layout_width="53dp"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/company_image" />
+
+            <LinearLayout
+                android:layout_width="323dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/companyName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lighting"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    android:id="@+id/companyRating"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:numStars="5"
+                    android:rating="4.5"
+                    android:stepSize="0.5" />
+
+                <!-- Company Description -->
+                <TextView
+                    android:id="@+id/companyDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Company Description"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
